@@ -13,7 +13,7 @@ resources:
  - name: hdi_db
    parameters:
       config:
-         schema: mml
+         schema: ml
    properties:
       hdi-container-name: ${service-name}
    type: com.sap.xs.hdi-container

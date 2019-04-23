@@ -1,0 +1,93 @@
+namespace aa.fypforecast.db.hdb.apl;
+
+context forecasting {
+    table type tt_function_header {
+        "KEY"   : String(50);
+        "VALUE" : String(255);
+    };
+    table type tt_operation_config {
+        "KEY"     : String(1000);
+        "VALUE"   : LargeString;
+        "CONTEXT" : LargeString;
+    };
+    table type tt_variable_roles {
+        "NAME"             : String(127);
+        "ROLE"             : String(10);
+        "COMPOSITION_TYPE" : String(10);
+        "COMPONENT_NAME"   : String(127);
+        "OID"              : String(50);
+    };
+    table type tt_operation_log {
+        "OID"       : String(50);
+        "TIMESTAMP" : UTCTimestamp;
+        "LEVEL"     : Integer;
+        "ORIGIN"    : String(50);
+        "MESSAGE"   : LargeString;
+    };
+    table type tt_summary {
+        "OID"   : String(50);
+        "KEY"   : String(100);
+        "VALUE" : String(200);
+    };
+    table type tt_indicators {
+        "OID"      : String(50);
+        "VARIABLE" : String(255);
+        "TARGET"   : String(255);
+        "KEY"      : String(100);
+        "VALUE"    : LargeString;
+        "DETAIL"   : LargeString;
+    };
+    table type tt_results {
+        "signal_time"          : Integer;
+        "signal_value"         : Double;
+        "kts_1"                : Double;
+        "kts_1_lowerlimit_95%" : Double;
+        "kts_1_upperlimit_95%" : Double;
+    };
+    table type tt_dataset {
+        "signal_time"  : Integer;
+        "signal_value" : Double;
+    };
+    table type tt_dataset_PopulationFemale {
+        "signal_time"               : Integer;
+        "FPopulation0_4"            : Integer;
+        "FPopulation5_9"            : Integer;
+        "FPopulation10_14"          : Integer;
+        "FPopulation15_19"          : Integer;
+        "FPopulation20_24"          : Integer;
+        "FPopulation25_29"          : Integer;
+        "FPopulation30_34"          : Integer;
+        "FPopulation35_39"          : Integer;
+        "FPopulation40_44"          : Integer;
+        "FPopulation45_49"          : Integer;
+        "FPopulation50_54"          : Integer;
+        "FPopulation55_59"          : Integer;
+        "FPopulation60_64"          : Integer;
+        "FPopulation65_69"          : Integer;
+        "FPopulation70_74"          : Integer;
+        "FPopulation75_79"          : Integer;
+        "FPopulation80Plus"         : Integer;
+		"signal_value"              : Double;
+    };
+        table type tt_dataset_PopulationMale {
+        "signal_time"               : Integer;
+        "MPopulation0_4"            : Integer;
+        "MPopulation5_9"            : Integer;
+        "MPopulation10_14"          : Integer;
+        "MPopulation15_19"          : Integer;
+        "MPopulation20_24"          : Integer;
+        "MPopulation25_29"          : Integer;
+        "MPopulation30_34"          : Integer;
+        "MPopulation35_39"          : Integer;
+        "MPopulation40_44"          : Integer;
+        "MPopulation45_49"          : Integer;
+        "MPopulation50_54"          : Integer;
+        "MPopulation55_59"          : Integer;
+        "MPopulation60_64"          : Integer;
+        "MPopulation65_69"          : Integer;
+        "MPopulation70_74"          : Integer;
+        "MPopulation75_79"          : Integer;
+        "MPopulation80Plus"         : Integer;
+		"signal_value"              : Double;
+    };
+};
