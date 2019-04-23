@@ -1,0 +1,83 @@
+{
+    "format_version": 1,
+    "imports": [
+        {
+            "column_mappings" : { "signal_time" : "Year", "signal_value" : "BirthRate, Crude (per 1,000 people)"},
+            "import_settings" : { "import_columns" : [ "signal_time", "signal_value"], "include_filter" : [], "exclude_filter" : []},
+            "source_data" : {
+                "data_type" : "CSV", "has_header" : true, "dialect" : "HANA", "type_config" : { "delimiter" : ",", "do_quote": true },
+                "file_name" : "aa.fypforecast.db.data::BirthRate.csv"
+            },
+            "target_table" : "aa.fypforecast.db.data::BirthRate"  
+        },   
+        {
+            "column_mappings" : { "signal_time" : "Year", "signal_value" : "DeathRate, Crude (per 1,000 people)"},
+            "import_settings" : { "import_columns" : [ "signal_time", "signal_value"], "include_filter" : [], "exclude_filter" : []},
+            "source_data" : {
+                "data_type" : "CSV", "has_header" : true, "dialect" : "HANA", "type_config" : { "delimiter" : ",", "do_quote": true },
+                "file_name" : "aa.fypforecast.db.data::DeathRate.csv"
+            },
+            "target_table" : "aa.fypforecast.db.data::DeathRate"  
+        },  
+        {
+            "column_mappings" : { "signal_time" : "Year", "signal_value" : "GNI, Atlas Method (current US$)"},
+            "import_settings" : { "import_columns" : [ "signal_time", "signal_value"], "include_filter" : [], "exclude_filter" : []},
+            "source_data" : {
+                "data_type" : "CSV", "has_header" : true, "dialect" : "HANA", "type_config" : { "delimiter" : ",", "do_quote": true },
+                "file_name" : "aa.fypforecast.db.data::GNIperCapita.csv"
+            },
+            "target_table" : "aa.fypforecast.db.data::GNIperCapita"  
+        }, 
+        {
+            "column_mappings" : { "signal_time" : "Year", "signal_value" : "HIVdeath"},
+            "import_settings" : { "import_columns" : [ "signal_time", "signal_value"], "include_filter" : [], "exclude_filter" : []},
+            "source_data" : {
+                "data_type" : "CSV", "has_header" : true, "dialect" : "HANA", "type_config" : { "delimiter" : ",", "do_quote": false },
+                "file_name" : "aa.fypforecast.db.data::HIVdeath.csv"
+            },
+            "target_table" : "aa.fypforecast.db.data::HIVdeath"  
+        },
+        {
+            "column_mappings" : { "signal_time" : "Year", "signal_value" : "HIVrates"},
+            "import_settings" : { "import_columns" : [ "signal_time", "signal_value"], "include_filter" : [], "exclude_filter" : []},
+            "source_data" : {
+                "data_type" : "CSV", "has_header" : true, "dialect" : "HANA", "type_config" : { "delimiter" : ",", "do_quote": false },
+                "file_name" : "aa.fypforecast.db.data::HIVrates.csv"
+            },
+            "target_table" : "aa.fypforecast.db.data::HIVrates"  
+        },
+        {
+            "column_mappings" : { "signal_time" : "Year", "signal_value" : "LifeExpected"},
+            "import_settings" : { "import_columns" : [ "signal_time", "signal_value"], "include_filter" : [], "exclude_filter" : []},
+            "source_data" : {
+                "data_type" : "CSV", "has_header" : true, "dialect" : "HANA", "type_config" : { "delimiter" : ",", "do_quote": false },
+                "file_name" : "aa.fypforecast.db.data::LifeExpectancy.csv"
+            },
+            "target_table" : "aa.fypforecast.db.data::LifeExpectancy"  
+        },
+        {
+            "column_mappings" : {"signal_time" : "Year", "signal_value" : "OverallFemalePopulation"},
+            "import_settings" : {
+                "import_columns" : [ "signal_time", "signal_value", "FPopulation0_4", "FPopulation5_9", "FPopulation10_14", "FPopulation15_19", "FPopulation20_24", "FPopulation25_29", "FPopulation30_34", "FPopulation35_39", "FPopulation40_44", "FPopulation45_49", "FPopulation50_54", "FPopulation55_59", "FPopulation60_64", "FPopulation65_69", "FPopulation70_74", "FPopulation75_79", "FPopulation80Plus"],
+                "include_filter" : [], "exclude_filter" : []
+            },
+            "source_data" : {
+                "data_type" : "CSV", "has_header" : true, "dialect" : "HANA", "type_config" : { "delimiter" : ",", "do_quote": false },
+                "file_name" : "aa.fypforecast.db.data::PopulationFemale.csv"
+            },
+            "target_table" : "aa.fypforecast.db.data::PopulationFemale"  
+        },
+        {
+            "column_mappings" : {"signal_time" : "Year", "signal_value" : "OverallMalePopulation"},
+            "import_settings" : {
+                "import_columns" : [ "signal_time", "signal_value", "MPopulation0_4", "MPopulation5_9", "MPopulation10_14", "MPopulation15_19", "MPopulation20_24", "MPopulation25_29", "MPopulation30_34", "MPopulation35_39", "MPopulation40_44", "MPopulation45_49", "MPopulation50_54", "MPopulation55_59", "MPopulation60_64", "MPopulation65_69", "MPopulation70_74", "MPopulation75_79", "MPopulation80Plus"],
+                "include_filter" : [], "exclude_filter" : []
+            },
+            "source_data" : {
+                "data_type" : "CSV", "has_header" : true, "dialect" : "HANA", "type_config" : { "delimiter" : ",", "do_quote": false },
+                "file_name" : "aa.fypforecast.db.data::PopulationMale.csv"
+            },
+            "target_table" : "aa.fypforecast.db.data::PopulationMale"  
+        }
+    ]
+}

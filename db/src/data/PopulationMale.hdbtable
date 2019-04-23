@@ -1,0 +1,24 @@
+COLUMN TABLE "aa.fypforecast.db.data::PopulationMale" (
+    "signal_time"  INTEGER CS_INT,
+    "MPopulation0_4" INTEGER CS_INT,
+    "MPopulation5_9" INTEGER CS_INT,
+    "MPopulation10_14" INTEGER CS_INT,
+    "MPopulation15_19" INTEGER CS_INT,
+    "MPopulation20_24" INTEGER CS_INT,
+    "MPopulation25_29" INTEGER CS_INT,
+    "MPopulation30_34" INTEGER CS_INT,
+    "MPopulation35_39" INTEGER CS_INT,
+    "MPopulation40_44" INTEGER CS_INT,
+    "MPopulation45_49" INTEGER CS_INT,
+    "MPopulation50_54" INTEGER CS_INT,
+    "MPopulation55_59" INTEGER CS_INT,
+    "MPopulation60_64" INTEGER CS_INT,
+    "MPopulation65_69" INTEGER CS_INT,
+    "MPopulation70_74" INTEGER CS_INT,
+    "MPopulation75_79" INTEGER CS_INT,
+    "MPopulation80Plus" INTEGER CS_INT,
+    "signal_value" DOUBLE CS_DOUBLE,
+    PRIMARY KEY (
+        "signal_time"
+    )
+);

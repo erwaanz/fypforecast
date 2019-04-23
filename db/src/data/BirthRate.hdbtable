@@ -1,0 +1,7 @@
+COLUMN TABLE "aa.fypforecast.db.data::BirthRate" (
+    "signal_time"  INTEGER CS_INT,
+    "signal_value" DOUBLE CS_DOUBLE,
+    PRIMARY KEY (
+        "signal_time"
+    )
+);
