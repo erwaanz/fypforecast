@@ -1,0 +1,26 @@
+VIEW "aa.fypforecast.db.hdb.pal.views::PopulationMale" as
+    select
+        to_int(rank() over (order by "signal_time" asc)) as "signal_time",
+        "signal_value",
+        "MPopulation0_4",
+  	    "MPopulation5_9",
+	    "MPopulation10_14",
+	    "MPopulation15_19",
+	    "MPopulation20_24",
+	    "MPopulation25_29",
+	    "MPopulation30_34",
+	    "MPopulation35_39",
+	    "MPopulation40_44",
+	    "MPopulation45_49",
+	    "MPopulation50_54",
+	    "MPopulation55_59",
+	    "MPopulation60_64",
+	    "MPopulation65_69",
+	    "MPopulation70_74",
+	    "MPopulation75_79",
+	    "MPopulation80Plus"
+    from
+        "aa.fypforecast.db.data::PopulationMale"
+    where
+        "signal_value" is not null
+    order by 1 asc

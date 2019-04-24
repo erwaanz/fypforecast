@@ -1,0 +1,10 @@
+{
+    "area" : "AFLPAL",
+    "function" : "FORECASTSMOOTHING_ANY",
+    "parameters" : [
+        {  "direction" : "IN",  "type" : "aa.fypforecast.db.hdb.pal::common.dataset"},
+        {  "direction" : "IN",  "type" : "aa.fypforecast.db.hdb.pal::common.parameter"},
+        {  "direction" : "OUT", "type" : "aa.fypforecast.db.hdb.pal::smoothing.output_raw"},
+        {  "direction" : "OUT", "type" : "aa.fypforecast.db.hdb.pal::common.statistics"}
+    ]
+}
