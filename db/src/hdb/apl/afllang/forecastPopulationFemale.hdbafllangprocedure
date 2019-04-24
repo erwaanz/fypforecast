@@ -1,0 +1,15 @@
+{
+    "area" : "APL_AREA",
+    "function" : "FORECAST",
+    "parameters" : [
+        { "direction" : "IN",  "type" : "aa.fypforecast.db.hdb.apl::forecast.function_header"},
+        { "direction" : "IN",  "type" : "aa.fypforecast.db.hdb.apl::forecast.operation_config"},
+        { "direction" : "IN",  "type" : "aa.fypforecast.db.hdb.apl::forecast.variable_descs"},
+        { "direction" : "IN",  "type" : "aa.fypforecast.db.hdb.apl::forecast.variable_roles"},
+        { "direction" : "IN",  "type" : "aa.fypforecast.db.hdb.apl::forecast.dataset_PopulationFemale"},
+        { "direction" : "OUT", "type" : "aa.fypforecast.db.hdb.apl::forecast.results"},
+        { "direction" : "OUT", "type" : "aa.fypforecast.db.hdb.apl::forecast.operation_log"},
+        { "direction" : "OUT", "type" : "aa.fypforecast.db.hdb.apl::forecast.summary"},
+        { "direction" : "OUT", "type" : "aa.fypforecast.db.hdb.apl::forecast.indicators"}
+    ]
+}
