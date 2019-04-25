@@ -1,0 +1,22 @@
+service {
+  "aa.fypforecast.db.data::BirthRate"                 as "apl_BirthRate";
+  "aa.fypforecast.db.data::DeathRate"				  as "apl_DeathRate";
+  "aa.fypforecast.db.data::GNIperCapita"              as "apl_GNIperCapita";
+  "aa.fypforecast.db.data::HIVdeath"            	  as "apl_HIVdeath";
+  "aa.fypforecast.db.data::HIVrates"        		  as "apl_HIVrates";
+  "aa.fypforecast.db.data::LifeExpectancy"            as "apl_LifeExpectancy";
+  "aa.fypforecast.db.data::PopulationFemale"    	  as "apl_PopulationFemale";
+  "aa.fypforecast.db.data::PopulationMale"  		  as "apl_PopulationMale";  
+
+  "aa.fypforecast.db.hdb.pal.views::BirthRate"              as "pal_BirthRate"              key ("signal_time");
+  "aa.fypforecast.db.hdb.pal.views::DeathRate"              as "pal_DeathRate"              key ("signal_time");
+  "aa.fypforecast.db.hdb.pal.views::GNIperCapita"           as "pal_GNIperCapita"           key ("signal_time");
+  "aa.fypforecast.db.hdb.pal.views::HIVdeath"   			as "pal_HIVdeath"   			key ("signal_time");
+  "aa.fypforecast.db.hdb.pal.views::HIVrates"       		as "pal_HIVrates"       		key ("signal_time");
+  "aa.fypforecast.db.hdb.pal.views::LifeExpectancy" 		as "pal_LifeExpectancy" 		key ("signal_time");
+  "aa.fypforecast.db.hdb.pal.views::PopulationFemale"   	as "pal_PopulationFemale"   	key ("signal_time"); 
+  "aa.fypforecast.db.hdb.pal.views::PopulationMale"   		as "pal_PopulationMale"   		key ("signal_time");  
+}
+settings {
+  support null;
+}
