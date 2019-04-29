@@ -10,9 +10,19 @@
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
 		"sourceTemplate": {
-			"id": "hanatemplates.basicSAPUI5ApplicationProject",
-			"version": "0.0.0"
-		}
+  "id": "hanatemplates.basicSAPUI5ApplicationProject",
+  "version": "0.0.0"
+},
+"dataSources": {
+  "data.xsodata": {
+    "uri": "/xsodata/data.xsodata/",
+    "type": "OData",
+    "settings": {
+      "odataVersion": "2.0"
+    }
+  }
+}
+
 	},
 
 	"sap.ui": {
@@ -58,40 +68,62 @@
 			"cozy": true
 		},
 		"models": {
-			"i18n": {
-				"type": "sap.ui.model.resource.ResourceModel",
-				"settings": {
-					"bundleName": "fypforecast.html.i18n.i18n"
-				}
-			}
+	"i18n": {
+		"type": "sap.ui.model.resource.ResourceModel",
+		"settings": {
+			"bundleName": "forecast.html.i18n.i18n"
+		}
+	},
+	"odata": {
+		"type": "sap.ui.model.odata.v2.ODataModel",
+		"preload": false,
+		"settings": {
+			"defaultOperationMode": "Server",
+			"defaultBindingMode": "Default",
+			"defaultCountMode": "Request",
+			"useBatch": false
 		},
+		"dataSource": "data.xsodata"
+	},
+	"config": {
+		"type": "sap.ui.model.json.JSONModel",
+		"preload": true,
+		"uri": "model/config.json"
+	},
+	"default": {
+		"type": "sap.ui.model.json.JSONModel",
+		"preload": true,
+		"uri": "model/default.json"
+	}
+},
+
 		"resources": {
 			"css": [{
 				"uri": "css/style.css"
 			}]
 		},
 		"routing": {
-			"config": {
-				"routerClass": "sap.m.routing.Router",
-				"viewType": "XML",
-				"async": true,
-				"viewPath": "fypforecast.html.view",
-				"controlAggregation": "pages",
-				"controlId": "idAppControl"
-			},
-			"routes": [{
-				"name": "RouteView1",
-				"pattern": "RouteView1",
-				"target": ["TargetView1"]
-			}],
-			"targets": {
-				"TargetView1": {
-					"viewType": "XML",
-					"transition": "slide",
-					"clearAggregation": true,
-					"viewName": "View1"
-				}
-			}
+	"config": {
+		"routerClass": "sap.m.routing.Router",
+		"viewType": "XML",
+		"async": true,
+		"viewPath": "fypforecast.html.view",
+		"controlAggregation": "pages",
+		"controlId": "idAppControl"
+	},
+	"routes": [{
+		"name": "home",
+		"pattern": "",
+		"target": "demo"
+	}],
+	"targets": {
+		"demo": {
+			"clearAggregation": true,
+			"viewName": "demo",
+			"viewLevel": 1
 		}
+	}
+}
+
 	}
 }

@@ -1,0 +1,49 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified" xmlns:ui="sap.ui">
+	<Popover title="Female Populations" class="sapUiContentPadding" placement="Bottom" showHeader="true">
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+			</Toolbar>
+		</footer>
+		<ui:layout.form.SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanL="9" labelSpanM="9" labelSpanS="9" columnsXL="3"
+			columnsL="3" columnsM="3">
+			<ui:content>
+				<core:Title text="Indices"/>
+				<Label design="Bold" text="Female Age 0-4 Years Old"/>
+				<Text text="{odata>FPopulation0_4}"/>
+				<Label design="Bold" text="Female Age 5-9 Years Old"/>
+				<Text text="{odata>FPopulation5_9}"/>
+				<Label design="Bold" text="Female Age 10-14 Years Old"/>
+				<Text text="{odata>FPopulation10_14}"/>
+				<Label design="Bold" text="Female Age 15-19 Years Old"/>
+				<Text text="{odata>FPopulation15_19}"/>
+				<Label design="Bold" text="Female Age 20-24 Years Old"/>
+				<Text text="{odata>FPopulation20_24}"/>
+				<Label design="Bold" text="Female Age 25-29 Years Old"/>
+				<Text text="{odata>FPopulation25_29}"/>
+				<Label design="Bold" text="Female Age 30-34 Years Old"/>
+				<Text text="{odata>FPopulation30_34}"/>
+				<Label design="Bold" text="Female Age 35-39 Years Old"/>
+				<Text text="{odata>FPopulation35_39}"/>
+				<Label design="Bold" text="Female Age 40-44 Years Old"/>
+				<Text text="{odata>FPopulation40_44}"/>
+				<Label design="Bold" text="Female Age 45-49 Years Old"/>
+				<Text text="{odata>FPopulation45_49}"/>
+				<Label design="Bold" text="Female Age 50-54 Years Old"/>
+				<Text text="{odata>FPopulation0_4}"/>
+				<Label design="Bold" text="Female Age 55-59 Years Old"/>
+				<Text text="{odata>FPopulation55_59}"/>
+				<Label design="Bold" text="Female Age 60-64 Years Old"/>
+				<Text text="{odata>FPopulation60_64}"/>
+				<Label design="Bold" text="Female Age 65-69 Years Old"/>
+				<Text text="{odata>FPopulation65_69}"/>
+				<Label design="Bold" text="Female Age 70-74 Years Old"/>
+				<Text text="{odata>FPopulation70_74}"/>
+				<Label design="Bold" text="Female Age 75-79 Years Old"/>
+				<Text text="{odata>FPopulation75_79}"/>
+				<Label design="Bold" text="Female Age 80 and Above"/>
+				<Text text="{odata>FPopulation80Plus}"/>
+			</ui:content>
+		</ui:layout.form.SimpleForm>
+	</Popover>
+</core:FragmentDefinition>

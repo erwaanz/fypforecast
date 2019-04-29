@@ -1,0 +1,148 @@
+{
+	"algorithms": {
+		"label": "Algorithms",
+		"description": "Select an algorithm.",
+		"items": [{
+			"key": "forecast",
+			"library": "apl",
+			"label": "APL Forecast Algorithm."
+		}, {
+			"key": "auto_arima",
+			"library": "pal",
+			"label": "PAL Auto ARIMA."
+		}, {
+			"key": "auto_smoothing",
+			"library": "pal",
+			"label": "PAL Auto Exponential Smoothing."
+		}, {
+			"key": "seasonality_test",
+			"library": "pal",
+			"label": "PAL Seasonality Test."
+		}]
+	},
+	"datasets": {
+		"label": "Datasets",
+		"description": "Select a dataset",
+		"list": [{
+			"key": "BirthRate",
+			"label": "Birth Rates, Crude (per 1,000 people).",
+			"libraries": [{
+				"key": "apl"
+			}, {
+				"key": "pal"
+			}]
+		}, {
+			"key": "DeathRate",
+			"label": "Death Rates, Crude (per 1,000 people).",
+			"libraries": [{
+				"key": "apl"
+			}, {
+				"key": "pal"
+			}]
+		}, {
+			"key": "GNIperCapita",
+			"label": "Gross National Income, Atlas Method (current US$).",
+			"libraries": [{
+				"key": "apl"
+			}, {
+				"key": "pal"
+			}]
+		}, {
+			"key": "HIVdeath",
+			"label": "Deaths Caused by HIV.",
+			"libraries": [{
+				"key": "apl"
+			}, {
+				"key": "pal"
+			}]
+		}, {
+			"key": "HIVrates",
+			"label": "People Living with HIV.",
+			"libraries": [{
+				"key": "apl"
+			}, {
+				"key": "pal"
+			}]
+		}, {
+			"key": "LifeExpectancy",
+			"label": "Life Expectancy.",
+			"libraries": [{
+				"key": "apl"
+			}, {
+				"key": "pal"
+			}]
+		}, {
+			"key": "PopulationFemale",
+			"label": "Overall Female Population.",
+			"hasExtraPredictors": true,
+			"libraries": [{
+				"key": "apl"
+			}, {
+				"key": "pal"
+			}]
+		}, {
+			"key": "PopulationMale",
+			"label": "Overall Male Population.",
+			"hasExtraPredictors": true,
+			"libraries": [{
+				"key": "apl"
+			}, {
+				"key": "pal"
+			}]
+		}
+		]
+	},
+	"vizProperties": {
+		"title": {
+			"visible": false
+		},
+		"legend": {
+			"visible": false
+		},
+		"plotArea": {
+			"width": 1,
+			"adjustScale": true,
+			"isSmoothed": true
+		},
+		"timeAxis": {
+			"levels": "year",
+			"visible": false,
+			"title": {
+				"visible": false
+			}
+		},
+		"valueAxis": {
+			"title": {
+				"visible": false
+			}
+		},
+		"categoryAxis": {
+			"visible": false,
+			"adjustScale": true,
+			"isSmoothed": true,
+			"primaryScale": {
+				"fixedRange": true,
+				"minValue": 0,
+				"maxValue": 100
+			},
+			"title": {
+				"visible": false
+			},
+			"layout": {
+				"maxWidth": 0.01,
+				"width": 100
+
+			},
+			"scale": {
+				"fixedRange": true,
+				"minValue": 0,
+				"maxValue": 100
+			}
+		},
+		"interaction": {
+			"selectability": {
+				"mode": "single"
+			}
+		}
+	}
+}

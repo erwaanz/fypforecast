@@ -1,0 +1,49 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified" xmlns:ui="sap.ui">
+	<Popover title="Male Populations" class="sapUiContentPadding" placement="Bottom" showHeader="true">
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+			</Toolbar>
+		</footer>
+		<ui:layout.form.SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanL="9" labelSpanM="9" labelSpanS="9" columnsXL="3"
+			columnsL="3" columnsM="3">
+			<ui:content>
+				<core:Title text="Indices"/>
+				<Label design="Bold" text="Male Age 0-4 Years Old"/>
+				<Text text="{odata>MPopulation0_4}"/>
+				<Label design="Bold" text="Male Age 5-9 Years Old"/>
+				<Text text="{odata>MPopulation5_9}"/>
+				<Label design="Bold" text="Male Age 10-14 Years Old"/>
+				<Text text="{odata>MPopulation10_14}"/>
+				<Label design="Bold" text="Male Age 15-19 Years Old"/>
+				<Text text="{odata>MPopulation15_19}"/>
+				<Label design="Bold" text="Male Age 20-24 Years Old"/>
+				<Text text="{odata>MPopulation20_24}"/>
+				<Label design="Bold" text="Male Age 25-29 Years Old"/>
+				<Text text="{odata>MPopulation25_29}"/>
+				<Label design="Bold" text="Male Age 30-34 Years Old"/>
+				<Text text="{odata>MPopulation30_34}"/>
+				<Label design="Bold" text="Male Age 35-39 Years Old"/>
+				<Text text="{odata>MPopulation35_39}"/>
+				<Label design="Bold" text="Male Age 40-44 Years Old"/>
+				<Text text="{odata>MPopulation40_44}"/>
+				<Label design="Bold" text="Male Age 45-49 Years Old"/>
+				<Text text="{odata>MPopulation45_49}"/>
+				<Label design="Bold" text="Male Age 50-54 Years Old"/>
+				<Text text="{odata>MPopulation0_4}"/>
+				<Label design="Bold" text="Male Age 55-59 Years Old"/>
+				<Text text="{odata>MPopulation55_59}"/>
+				<Label design="Bold" text="Male Age 60-64 Years Old"/>
+				<Text text="{odata>MPopulation60_64}"/>
+				<Label design="Bold" text="Male Age 65-69 Years Old"/>
+				<Text text="{odata>MPopulation65_69}"/>
+				<Label design="Bold" text="Male Age 70-74 Years Old"/>
+				<Text text="{odata>MPopulation70_74}"/>
+				<Label design="Bold" text="Male Age 75-79 Years Old"/>
+				<Text text="{odata>MPopulation75_79}"/>
+				<Label design="Bold" text="Male Age 80 and Above"/>
+				<Text text="{odata>MPopulation80Plus}"/>
+			</ui:content>
+		</ui:layout.form.SimpleForm>
+	</Popover>
+</core:FragmentDefinition>
