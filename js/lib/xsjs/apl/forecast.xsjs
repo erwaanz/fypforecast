@@ -33,8 +33,8 @@ function doPost() {
             if (typeof requestBody.LASTTRAININGTIMEPOINT !== "undefined") {
                 params.LASTTRAININGTIMEPOINT = requestBody.LASTTRAININGTIMEPOINT;
             }
-            if (typeof requestBody.CUTTINGSTRATEGY !== "undefined") {
-                params.CUTTINGSTRATEGY = requestBody.CUTTINGSTRATEGY;
+        	 if (typeof requestBody.CUTTINGSTRATEGY !== "undefined") {
+               params.CUTTINGSTRATEGY = requestBody.CUTTINGSTRATEGY;
             }
             if (typeof requestBody.FORECASTMETHOD !== "undefined") {
                 params.FORECASTMETHOD = requestBody.FORECASTMETHOD;
