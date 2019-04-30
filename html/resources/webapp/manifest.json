@@ -71,7 +71,7 @@
 	"i18n": {
 		"type": "sap.ui.model.resource.ResourceModel",
 		"settings": {
-			"bundleName": "forecast.html.i18n.i18n"
+			"bundleName": "fypforecast.html.i18n.i18n"
 		}
 	},
 	"odata": {
@@ -94,6 +94,11 @@
 		"type": "sap.ui.model.json.JSONModel",
 		"preload": true,
 		"uri": "model/default.json"
+	},
+	"apl_forecast": {
+	"type": "sap.ui.model.json.JSONModel",
+	"preload": true,
+	"uri": "model/algorithms/apl/forecast.json"
 	}
 },
 
@@ -111,17 +116,31 @@
 		"controlAggregation": "pages",
 		"controlId": "idAppControl"
 	},
-	"routes": [{
+	"routes": [
+	{
 		"name": "home",
 		"pattern": "",
 		"target": "demo"
-	}],
-	"targets": {
-		"demo": {
+	},
+	{
+		"name": "forecast",
+		"pattern": "forecast",
+		"target": "forecast"
+	}
+	],
+	"targets": 
+	{
+		"demo": 
+			{
 			"clearAggregation": true,
 			"viewName": "demo",
 			"viewLevel": 1
-		}
+			},
+		"forecast": 
+			{
+			"clearAggregation": true,
+			"viewName": "algorithms.apl.forecast"
+			}
 	}
 }
 
