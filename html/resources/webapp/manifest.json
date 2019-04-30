@@ -109,6 +109,11 @@
 	"type": "sap.ui.model.json.JSONModel",
 	"preload": true,
 	"uri": "model/algorithms/pal/auto_smoothing.json"
+	},
+	"pal_seasonality_test": {
+	"type": "sap.ui.model.json.JSONModel",
+	"preload": true,
+	"uri": "model/algorithms/pal/seasonality_test.json"
 	}
 },
 
@@ -146,6 +151,11 @@
 	"name": "auto_smoothing",
 	"pattern": "auto_smoothing",
 	"target": "auto_smoothing"
+	},
+	{
+	"name": "seasonality_test",
+	"pattern": "seasonality_test",
+	"target": "seasonality_test"
 	}
 	],
 	"targets": 
@@ -170,7 +180,13 @@
 			{
 			"clearAggregation": true,
 			"viewName": "algorithms.pal.auto_smoothing"
+			},
+		"seasonality_test": 
+			{
+			"clearAggregation": true,
+			"viewName": "algorithms.pal.seasonality_test"
 			}
+
 	}
 }
 
