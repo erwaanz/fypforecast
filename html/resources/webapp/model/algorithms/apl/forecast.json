@@ -80,7 +80,7 @@
 	},
 	"default_payload": {
 		"DATASETNAME": null,
-		"HORIZON": 34,
+		"HORIZON": 20,
 		"LASTTRAININGTIMEPOINT": null,
 		"CUTTINGSTRATEGY": "sequential",
 		"FORECASTMETHOD": "Default",
@@ -91,3 +91,4 @@
 		"FORECASTMAXLAGS": null
 	}
 }
+

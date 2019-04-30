@@ -1,8 +1,9 @@
+
 <mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:ui="sap.ui"
  controllerName="fypforecast.html.controller.algorithms.apl.forecast"
 	displayBlock="true">
 	<App id="idAppControl">
-		<Page showHeader="true" showNavButton="true" navButtonPress="onNavHome" title="Forecast - APL Forecasting">
+		<Page showHeader="true" showNavButton="true" navButtonPress="onNavHome" title="Forecast - APL Forecast">
 			<content>
 				<ui:core.Fragment fragmentName="fypforecast.html.fragment.display_list" type="XML"/>
 				<TextArea wrapping="true" editable="false" width="100%" visible="{= !${default>/selected/dataset/hasExtraPredictors} }"

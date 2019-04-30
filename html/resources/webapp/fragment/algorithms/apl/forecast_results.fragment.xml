@@ -7,7 +7,7 @@
 					<viz:dataset>
 						<viz:ui5.data.FlattenedDataset data="{path : 'results>/tables/RESULTS'}">
 							<viz:dimensions>
-								<viz:ui5.data.DimensionDefinition name="Year" value="{path : 'results>signal_time'}" dataType="int"/>
+								<viz:ui5.data.DimensionDefinition name="Date" value="{path : 'results>signal_time'}" dataType="date"/>
 							</viz:dimensions>
 							<viz:measures>
 								<viz:ui5.data.MeasureDefinition name="Original Value" value="{path : 'results>signal_value'}"/>
@@ -22,15 +22,15 @@
 						<viz:ui5.controls.common.feeds.FeedItem uid="valueAxis" type="Measure" values="Forecast"/>
 						<viz:ui5.controls.common.feeds.FeedItem uid="valueAxis" type="Measure" values="Lower Limit"/>
 						<viz:ui5.controls.common.feeds.FeedItem uid="valueAxis" type="Measure" values="Upper Limit"/>
-						<viz:ui5.controls.common.feeds.FeedItem uid="timeAxis" type="Dimension" values="Year"/>
+						<viz:ui5.controls.common.feeds.FeedItem uid="timeAxis" type="Dimension" values="Date"/>
 					</viz:feeds>
 				</viz:ui5.controls.VizFrame>
 				<ui:table.Table enableBusyIndicator="true" selectionMode="None" width="100%" rows="{path : 'results>/tables/RESULTS', sorter: { path: 'signal_time', 	descending: true} }">
 					<ui:columns>
 						<ui:table.Column sortProperty="signal_time" filterProperty="signal_time">
-							<Label text="Year"/>
+							<Label text="Date"/>
 							<ui:template>
-								<Text text="{path : 'results>signal_time', formatter : '.formatter.formatNumber'}"/>
+								<Text text="{path : 'results>signal_time', formatter : '.formatter.formatDate'}"/>
 							</ui:template>
 						</ui:table.Column>
 						<ui:table.Column sortProperty="signal_value" filterProperty="signal_value">
@@ -108,7 +108,7 @@
 						<ui:table.Column sortProperty="TIMESTAMP" filterProperty="TIMESTAMP">
 							<Label text="TIMESTAMP"/>
 							<ui:template>
-								<Text text="{path : 'results>TIMESTAMP', formatter : '.formatter.formatNumber'}"/>
+								<Text text="{path : 'results>TIMESTAMP', formatter : '.formatter.formatDate'}"/>
 							</ui:template>
 						</ui:table.Column>
 						<ui:table.Column sortProperty="LEVEL" filterProperty="LEVEL">
