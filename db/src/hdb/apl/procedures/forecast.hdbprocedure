@@ -1,7 +1,7 @@
 PROCEDURE "aa.fypforecast.db.hdb.apl.procedures::forecast" (
     in DatasetName            varchar(100),
     in Horizon                integer default 1,
-    in LastTrainingTimePoint  date,
+    in LastTrainingTimePoint  integer,
     in CuttingStrategy        varchar(100) default 'sequential',
     in ForecastMethod         varchar(100) default 'Default',
     in ForecastFallbackMethod varchar(100) default 'ExponentialSmoothing',
